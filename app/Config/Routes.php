@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('contacts','Contact::index');
+$routes->get('contacts/(:segment)','Contact::show/$1');
+$routes->post('contacts','Contact::create');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
